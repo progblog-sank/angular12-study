@@ -60,3 +60,18 @@ Package                      Version
 @angular-devkit/schematics   12.0.0 (cli-only)
 @schematics/angular          12.0.0 (cli-only)
 ```
+
+## material UI をインストール
+```
+$ ng add @angular/material
+ℹ Using package manager: npm
+✔ Found compatible package version: @angular/material@12.2.13.
+✔ Package information loaded.
+
+The package @angular/material@12.2.13 will be installed and executed.
+Would you like to proceed? Yes
+✔ Package successfully installed.
+? Choose a prebuilt theme name, or "custom" for a custom theme: Custom
+? Set up global Angular Material typography styles? No  
+? Set up browser animations for Angular Material? Yes
+```
