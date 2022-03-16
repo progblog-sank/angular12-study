@@ -28,7 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 # angular12の勉強用リポジトリ
 
-## インスール
+## 12指定でインスール
 ```
 $ npm install -g @angular/cli@12.0.0
 ```
