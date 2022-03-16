@@ -83,3 +83,7 @@ Would you like to proceed? Yes
 実際の作業は → [こちら](https://github.com/progblog-sank/angular12-study/commit/995f5a01c9a0eb9ea246ead722c00c7a112d3e51)
 
 参考：[Angular Material でカスタムカラーを使う](https://zenn.dev/fusho_takahashi/articles/20d044c4a2d459b5c2ca)
+
+## typography styles 設定
+
+実際の作業は → [こちら](https://github.com/progblog-sank/angular12-study/commit/19d2e56dc91bcb91af7330c17a33d715e93253cc)
