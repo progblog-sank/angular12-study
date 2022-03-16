@@ -75,3 +75,11 @@ Would you like to proceed? Yes
 ? Set up global Angular Material typography styles? No  
 ? Set up browser animations for Angular Material? Yes
 ```
+
+## custom theme 設定
+
+参考リンクを参照に実行すればcustom themeを変更できる。
+
+実際の作業は → [こちら](https://github.com/progblog-sank/angular12-study/commit/995f5a01c9a0eb9ea246ead722c00c7a112d3e51)
+
+参考：[Angular Material でカスタムカラーを使う](https://zenn.dev/fusho_takahashi/articles/20d044c4a2d459b5c2ca)
