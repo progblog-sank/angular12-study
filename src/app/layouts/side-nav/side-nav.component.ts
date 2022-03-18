@@ -5,11 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './side-nav.component.html',
   styleUrls: ['./side-nav.component.scss']
 })
+
 export class SideNavComponent implements OnInit {
 
-  constructor() { }
+  // init
+  navOpen: boolean;
 
-  ngOnInit(): void {
+  constructor() {
+    this.navOpen = true
   }
+
+  ngOnInit(): void { }
 
 }
