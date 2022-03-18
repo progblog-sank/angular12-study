@@ -16,6 +16,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { HeaderComponent } from './layouts/header/header.component';
 import { SideNavComponent } from './layouts/side-nav/side-nav.component';
 
+// Service
+import { UtilsService } from './service/utils.service'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +37,7 @@ import { SideNavComponent } from './layouts/side-nav/side-nav.component';
     MatToolbarModule,
     MatSidenavModule
   ],
-  providers: [],
+  providers: [UtilsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
