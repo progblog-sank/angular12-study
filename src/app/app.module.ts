@@ -11,19 +11,22 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
-
+import {MatListModule} from '@angular/material/list';
+// import {MatListOption} from '@angular/material/list';
 // Layout
 import { HeaderComponent } from './layouts/header/header.component';
-import { SideNavComponent } from './layouts/side-nav/side-nav.component';
+
+// Parts
+import { NavListComponent } from './parts/nav-list/nav-list.component'
 
 // Service
-import { UtilsService } from './service/utils.service'
+import { UtilsService } from './service/utils.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SideNavComponent
+    NavListComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,9 @@ import { UtilsService } from './service/utils.service'
     MatDividerModule,
     MatIconModule,
     MatToolbarModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule,
+    // MatListOption,
   ],
   providers: [UtilsService],
   bootstrap: [AppComponent]

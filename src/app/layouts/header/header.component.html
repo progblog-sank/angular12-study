@@ -1,6 +1,23 @@
 <mat-toolbar color="primary">
-  <button class="toggle-menu" mat-icon-button aria-label="メニューを開閉">
+  <button
+    class="toggle-menu"
+    mat-icon-button
+    aria-label="メニューを開閉"
+    (click)="sidenav.toggle()"
+  >
     <mat-icon>menu</mat-icon>
   </button>
   <span>Angularで色々サイト</span>
 </mat-toolbar>
+<mat-sidenav-container class="side-nav">
+  <mat-sidenav
+    #sidenav
+    mode="side"
+    opened="{{ responsive === 'pc' ? true : false }}"
+  >
+    <app-nav-list></app-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
