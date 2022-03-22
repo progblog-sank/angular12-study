@@ -162,4 +162,6 @@ ng generate component componentName --skip-tests
 <div><span class="child">World</span></div>
 ```
 
+## ルーティング
+実際の作業は → [こちら](https://github.com/progblog-sank/angular12-study/commit/bbe8e9979f24ad9431c71f5f9732bdbfd35afd72)
 
