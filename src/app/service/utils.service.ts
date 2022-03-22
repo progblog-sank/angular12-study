@@ -4,18 +4,18 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UtilsService {
-  responsive: string
+  responsive: boolean
 
   constructor() {
     this.responsive = this.getResponsive();
 
   }
 
-  getResponsive(): string {
+  getResponsive(): boolean {
     if (window.innerWidth < 990) {
-      return 'mobile'
+      return false // mobile
     } else {
-      return 'pc'
+      return true // pc
     }
   }
 }

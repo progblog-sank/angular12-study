@@ -8,10 +8,10 @@ import { UtilsService } from '../../service/utils.service'
 export class HeaderComponent implements OnInit {
 
   // init
-  responsive: string;
+  responsive: boolean;
 
   constructor(private service: UtilsService) {
-    this.responsive = 'pc'
+    this.responsive = true
   }
 
   ngOnInit(): void {
@@ -22,9 +22,9 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize() {
     if (window.innerWidth < 990) {
-      this.responsive = 'mobile'
+      this.responsive = false // mobile
     } else {
-      this.responsive = 'pc'
+      this.responsive = true // pc
     }
   }
 }

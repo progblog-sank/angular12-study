@@ -13,7 +13,8 @@
   <mat-sidenav
     #sidenav
     mode="side"
-    opened="{{ responsive === 'pc' ? true : false }}"
+    [mode]="responsive ? 'side' : 'over'"
+    opened="{{ responsive }}"
   >
     <app-nav-list></app-nav-list>
   </mat-sidenav>

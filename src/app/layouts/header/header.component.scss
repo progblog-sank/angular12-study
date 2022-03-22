@@ -27,3 +27,8 @@
   min-width: 260px;
   background-color: #f2f2f2;
 }
+.mat-drawer-backdrop.mat-drawer-shown {
+  display: none !important;
+  visibility: hidden !important;
+}
+
