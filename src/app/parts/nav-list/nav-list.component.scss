@@ -1,0 +1,17 @@
+
+.mat-list-single-selected-option {
+  background-color: transparent;
+}
+.mat-list-option {
+  height: auto !important;
+  a {
+    height: 46px !important;
+    display: flex;
+    align-items: center;
+    color: #444444;
+    text-decoration: none;
+    &.active {
+      color: #1669bb;
+    }
+  }
+}

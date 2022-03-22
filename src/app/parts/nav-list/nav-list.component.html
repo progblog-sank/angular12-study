@@ -1,7 +1,9 @@
 <mat-selection-list #shoes [multiple]="false">
   <mat-list-option *ngFor="let shoe of pageTitle" [value]="shoe">
-    {{shoe}}
+    <a routerLink="{{ shoe.componentName }}" routerLinkActive="active">{{
+      shoe.pageName
+    }}</a>
   </mat-list-option>
 </mat-selection-list>
 
-<p>
+<p></p>

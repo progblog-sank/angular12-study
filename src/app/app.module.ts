@@ -12,7 +12,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
-// import {MatListOption} from '@angular/material/list';
+
 // Layout
 import { HeaderComponent } from './layouts/header/header.component';
 
@@ -21,12 +21,16 @@ import { NavListComponent } from './parts/nav-list/nav-list.component'
 
 // Service
 import { UtilsService } from './service/utils.service';
+import { HomeComponent } from './pages/home/home.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     NavListComponent,
+    HomeComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

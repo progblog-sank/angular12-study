@@ -6,9 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-list.component.scss']
 })
 export class NavListComponent implements OnInit {
-  pageTitle: string[]
+  pageTitle: {
+    pageName: string,
+    componentName: string
+  }[]
   constructor() {
-    this.pageTitle = ['ページ01', 'ページ02', 'ページ03', 'ページ04', 'ページ05'];
+    this.pageTitle = [
+      {
+        pageName: 'ホーム',
+        componentName: 'home'
+      },
+      {
+        pageName: 'お問い合わせ',
+        componentName: 'contact'
+      }
+
+    ];
   }
   ngOnInit(): void {
   }
