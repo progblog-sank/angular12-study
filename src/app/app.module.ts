@@ -23,6 +23,7 @@ import { NavListComponent } from './parts/nav-list/nav-list.component'
 import { UtilsService } from './service/utils.service';
 import { HomeComponent } from './pages/home/home.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { MediaComponent } from './pages/media/media.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ContactComponent } from './pages/contact/contact.component';
     NavListComponent,
     HomeComponent,
     ContactComponent,
+    MediaComponent,
   ],
   imports: [
     BrowserModule,

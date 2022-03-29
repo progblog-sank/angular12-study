@@ -17,6 +17,10 @@ export class NavListComponent implements OnInit {
         componentName: 'home'
       },
       {
+        pageName: '作成ログ',
+        componentName: 'media'
+      },
+      {
         pageName: 'お問い合わせ',
         componentName: 'contact'
       }
