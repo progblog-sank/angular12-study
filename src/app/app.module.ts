@@ -28,6 +28,7 @@ import { NavListComponent } from './parts/nav-list/nav-list.component'
 
 // Service
 import { UtilsService } from './service/utils.service';
+import { MediaSlugComponent } from './pages/media-slug/media-slug.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { UtilsService } from './service/utils.service';
     HomeComponent,
     ContactComponent,
     MediaComponent,
+    MediaSlugComponent,
   ],
   imports: [
     BrowserModule,
