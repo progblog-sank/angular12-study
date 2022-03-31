@@ -1,1 +1,8 @@
-<p>media works!</p>
+<div class="media" *ngIf="mediaList.length !== 0; else loadingContent">
+  <mat-card *ngFor="let media of mediaList">
+    <a routerLink="{{ media.id }}" >{{ media.title }}</a>
+  </mat-card>
+</div>
+<ng-template #loadingContent>
+  <mat-spinner></mat-spinner>
+</ng-template>

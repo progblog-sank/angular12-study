@@ -11,19 +11,23 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import {MatListModule} from '@angular/material/list';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 // Layout
 import { HeaderComponent } from './layouts/header/header.component';
+
+// pages
+import { HomeComponent } from './pages/home/home.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { MediaComponent } from './pages/media/media.component';
 
 // Parts
 import { NavListComponent } from './parts/nav-list/nav-list.component'
 
 // Service
 import { UtilsService } from './service/utils.service';
-import { HomeComponent } from './pages/home/home.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { MediaComponent } from './pages/media/media.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +50,8 @@ import { MediaComponent } from './pages/media/media.component';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    // MatListOption,
+    MatCardModule,
+    MatProgressSpinnerModule,
   ],
   providers: [UtilsService],
   bootstrap: [AppComponent]
