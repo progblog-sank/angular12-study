@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment.microcms';
-import axios from 'axios';
+import { CmsService } from '../../service/cms.service'
 
 @Component({
   selector: 'app-media',
@@ -9,20 +9,19 @@ import axios from 'axios';
 })
 export class MediaComponent implements OnInit {
   mediaList: any
-  constructor() {
+  constructor(private service: CmsService) {
     this.mediaList = []
   }
 
+  getMediaList(): void {
+    this.service.getMediaList().subscribe(res => {
+      this.mediaList = res.contents;
+      console.log(this.mediaList)
+    })
+  }
+
   ngOnInit(): void {
-    window.setTimeout(() => {
-      axios
-        .get(environment.domain, {
-          headers: { "x-microcms-api-key": environment.key },
-        })
-        .then((response) => {
-          this.mediaList = response.data.contents
-        });
-    }, 1000)
+    this.getMediaList()
   }
 
 }

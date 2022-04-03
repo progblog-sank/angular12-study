@@ -25,10 +25,14 @@ import { MediaComponent } from './pages/media/media.component';
 
 // Parts
 import { NavListComponent } from './parts/nav-list/nav-list.component'
+import { MediaSlugComponent } from './pages/media-slug/media-slug.component';
 
 // Service
 import { UtilsService } from './service/utils.service';
-import { MediaSlugComponent } from './pages/media-slug/media-slug.component';
+import { CmsService } from './service/cms.service';
+
+// Other
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -44,6 +48,7 @@ import { MediaSlugComponent } from './pages/media-slug/media-slug.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
 
     // material
     MatButtonModule,
@@ -55,7 +60,7 @@ import { MediaSlugComponent } from './pages/media-slug/media-slug.component';
     MatCardModule,
     MatProgressSpinnerModule,
   ],
-  providers: [UtilsService],
+  providers: [UtilsService, CmsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
