@@ -1,0 +1,22 @@
+.page-wrap {
+    align-items: baseline;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+.media-content {
+    width: 75%;
+    margin-right: 40px;
+}
+.media-content-heading {
+    font-size: 40px;
+    font-weight: bold;
+}
+.media-content-body {
+    margin-top: 40px;
+}
+
+.media-table {
+    position: sticky;
+    top: 20px;
+}
