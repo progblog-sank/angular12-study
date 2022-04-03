@@ -22,5 +22,9 @@ export class CmsService {
   getMediaList(): Observable<any> {
     return this.http.get<any>(this.url, this.httpOptions);
   }
+
+  getMediaContent(slug: string): Observable<any> {
+    return this.http.get<any>(this.url + '/' + slug, this.httpOptions);
+  }
 }
 

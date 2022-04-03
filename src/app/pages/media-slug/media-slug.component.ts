@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment.microcms';
-import axios from 'axios';
+import { CmsService } from '../../service/cms.service'
 
 
 @Component({
@@ -11,20 +10,20 @@ import axios from 'axios';
 export class MediaSlugComponent implements OnInit {
   content: any
   slug: string
-  constructor() {
+  constructor(private service: CmsService) {
     this.content = {}
     this.slug = ''
   }
 
+  getMediaContent(): void {
+    this.service.getMediaContent(this.slug).subscribe(res => {
+      this.content = res;
+    })
+  }
+
   ngOnInit(): void {
     this.slug = window.location.href.split("/").filter(e => Boolean(e))[3]
-    axios
-      .get(environment.domain + '/' + this.slug, {
-        headers: { "x-microcms-api-key": environment.key },
-      })
-      .then((response) => {
-        this.content = response.data
-      });
+    this.getMediaContent()
   }
 
 }

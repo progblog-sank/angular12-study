@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment.microcms';
 import { CmsService } from '../../service/cms.service'
 
 @Component({
@@ -16,7 +15,6 @@ export class MediaComponent implements OnInit {
   getMediaList(): void {
     this.service.getMediaList().subscribe(res => {
       this.mediaList = res.contents;
-      console.log(this.mediaList)
     })
   }
 
