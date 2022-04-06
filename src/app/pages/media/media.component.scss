@@ -1,6 +1,10 @@
+@import "../../../assets/variables.scss";
 .media {
   display: flex;
   flex-wrap: wrap;
+  max-width: 768px;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 .mat-card {
   display: flex;
@@ -14,6 +18,13 @@
   }
   &:nth-of-type(n + 4) {
     margin-top: 20px;
+  }
+  @media (max-width: $mq-mobile) {
+    width: 100%;
+    margin-right: 0;
+    &:nth-of-type(n + 1) {
+      margin-top: 20px;
+    }
   }
   a {
     display: flex;

@@ -5,8 +5,9 @@
     justify-content: center;
 }
 .media-content {
-    width: 75%;
-    margin-right: 40px;
+    max-width: 768px;
+    padding: 0 20px;
+    margin: 0 auto;
 }
 .media-content-heading {
     font-size: 40px;
@@ -19,14 +20,14 @@
             line-height: 1.7;
         }
         h2 {
-            font-size: 32px;
-            font-weight: bold;
-            margin-bottom: 1em;
-        }
-        h3 {
             font-size: 24px;
             font-weight: bold;
-            margin-bottom: 1em;
+            margin: 1em 0;
+        }
+        h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 1em 0;
         }
         p {
             margin: 1em 0;
@@ -86,7 +87,4 @@
     }
 }
 
-.media-table {
-    position: sticky;
-    top: 20px;
-}
+
