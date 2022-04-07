@@ -1,5 +1,8 @@
 <div class="page-wrap" *ngIf="this.waiting; else loadingContent">
     <div class="media-content">
+        <button routerLink="/media">
+            <mat-icon><span class="material-icons md-36">undo</span></mat-icon>
+        </button>
         <div class="media-content-heading">
             <h1>{{ content.title }}</h1>
         </div>
