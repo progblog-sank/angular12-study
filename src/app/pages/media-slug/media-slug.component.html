@@ -1,4 +1,4 @@
-<div class="page-wrap">
+<div class="page-wrap" *ngIf="this.waiting; else loadingContent">
     <div class="media-content">
         <div class="media-content-heading">
             <h1>{{ content.title }}</h1>
@@ -8,3 +8,6 @@
         </div>
     </div>
 </div>
+<ng-template #loadingContent>
+    <mat-spinner></mat-spinner>
+</ng-template>

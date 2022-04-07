@@ -8,16 +8,16 @@ import { CmsService } from '../../service/cms.service'
   styleUrls: ['./media-slug.component.scss']
 })
 export class MediaSlugComponent implements OnInit {
-  content: any
-  slug: string
+  content: any = {}
+  slug: string = ""
+  waiting: boolean = false
   constructor(private service: CmsService) {
-    this.content = {}
-    this.slug = ''
   }
 
   getMediaContent(): void {
     this.service.getMediaContent(this.slug).subscribe(res => {
       this.content = res;
+      this.waiting = true;
     })
   }
 

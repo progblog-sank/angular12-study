@@ -16,7 +16,7 @@
     [mode]="responsive ? 'side' : 'over'"
     opened="{{ responsive }}"
   >
-    <app-nav-list></app-nav-list>
+    <app-nav-list  (click)="responsive ? '' : sidenav.close()"></app-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <ng-content></ng-content>
