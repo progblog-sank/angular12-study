@@ -15,6 +15,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 // Layout
 import { HeaderComponent } from './layouts/header/header.component';
@@ -62,7 +63,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatListModule,
     MatCardModule,
     MatProgressSpinnerModule,
-    MatInputModule
+    MatInputModule,
+    MatSnackBarModule
   ],
   providers: [UtilsService, CmsService],
   bootstrap: [AppComponent]

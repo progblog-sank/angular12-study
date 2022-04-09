@@ -10,6 +10,7 @@ import { environment } from 'src/environments/environment.microcms';
 export class CmsService {
 
   private url = environment.domain;
+  private contactUrl = environment.domainContact;
   private httpOptions: any = {
     headers: new HttpHeaders({
       'x-microcms-api-key': environment.key
@@ -26,5 +27,12 @@ export class CmsService {
   getMediaContent(slug: string): Observable<any> {
     return this.http.get<any>(this.url + '/' + slug, this.httpOptions);
   }
+
+    // https://angular.jp/guide/http
+  postContactContent(obj: any): Observable<any> {
+    return this.http.post<any>(this.contactUrl, obj, this.httpOptions)
+    
+  }
+
 }
 
