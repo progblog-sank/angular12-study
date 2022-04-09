@@ -14,6 +14,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatInputModule } from '@angular/material/input';
 
 // Layout
 import { HeaderComponent } from './layouts/header/header.component';
@@ -33,6 +34,7 @@ import { CmsService } from './service/cms.service';
 
 // Other
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -49,6 +51,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ReactiveFormsModule,
 
     // material
     MatButtonModule,
@@ -59,6 +62,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatListModule,
     MatCardModule,
     MatProgressSpinnerModule,
+    MatInputModule
   ],
   providers: [UtilsService, CmsService],
   bootstrap: [AppComponent]

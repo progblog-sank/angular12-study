@@ -1,1 +1,35 @@
-<p>contact works!</p>
+<div class="l-content">
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>お問合せタイトル</mat-label>
+                <input matInput type="text" formControlName="title" required>
+                <mat-icon matSuffix>rocket_launch</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>お名前</mat-label>
+                <input matInput type="text" formControlName="name" required>
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>アドレス</mat-label>
+                <input matInput type="text" formControlName="email" required>
+                <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>お問合せ内容</mat-label>
+                <textarea matInput type="text" formControlName="content" required></textarea>
+            </mat-form-field>
+        </p>
+        <p>
+            <button mat-raised-button color="primary" type="submit"
+                [disabled]="contactForm.status ==='INVALID'">送信</button>
+        </p>
+    </form>
+</div>
