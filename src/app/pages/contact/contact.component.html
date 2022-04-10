@@ -28,8 +28,7 @@
             </mat-form-field>
         </p>
         <p>
-            <button mat-raised-button color="primary" type="submit"
-                [disabled]="contactForm.status ==='INVALID'">送信</button>
+            <button mat-raised-button color="primary" type="submit" [disabled]="getIsValid() || sending">送信</button>
         </p>
     </form>
 </div>

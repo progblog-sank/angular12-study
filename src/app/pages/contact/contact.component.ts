@@ -16,15 +16,20 @@ export class ContactComponent implements OnInit {
     email: [''],
     content: ['']
   });
+  sending: boolean = false
 
-  constructor(private fb: FormBuilder, private service: CmsService, private _snackBar: MatSnackBar) {
+  constructor(private fb: FormBuilder, private service: CmsService, private snackBar: MatSnackBar) {
 
   }
 
   ngOnInit(): void {
   }
+  getIsValid() {
+    return this.contactForm.status === 'INVALID'
+  }
 
   onSubmit() {
+    this.sending = true
     this.service.postContactContent(this.contactForm.value).subscribe(res => {
       if ('id' in res) {
         this.openSnackBar("送信成功しました。")
@@ -33,10 +38,19 @@ export class ContactComponent implements OnInit {
   }
 
   openSnackBar(msg: string) {
-    this._snackBar.open(msg, 'close', {
+    let snackBarRef = this.snackBar.open(msg, 'close', {
       horizontalPosition: 'center',
       verticalPosition: 'top',
       duration: 5000
+    });
+    snackBarRef.afterDismissed().subscribe(() => {
+      this.sending = false;
+      this.contactForm.patchValue({
+        title: '',
+        name: '',
+        email: '',
+        content: ''
+      })
     });
   }
 
