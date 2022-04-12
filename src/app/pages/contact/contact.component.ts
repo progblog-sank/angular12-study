@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CmsService } from 'src/app/service/cms.service';
 
@@ -13,7 +13,7 @@ export class ContactComponent implements OnInit {
   contactForm = this.fb.group({
     title: [''],
     name: [''],
-    email: [''],
+    email: ['', Validators.email],
     content: ['']
   });
   sending: boolean = false
@@ -24,6 +24,7 @@ export class ContactComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   getIsValid() {
     return this.contactForm.status === 'INVALID'
   }

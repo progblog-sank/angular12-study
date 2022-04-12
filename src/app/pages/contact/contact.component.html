@@ -19,6 +19,7 @@
                 <mat-label>アドレス</mat-label>
                 <input matInput type="text" formControlName="email" required>
                 <mat-icon matSuffix>email</mat-icon>
+                <mat-error *ngIf="contactForm.controls.email.errors?.email">有効なアドレスを入力してください。</mat-error>
             </mat-form-field>
         </p>
         <p>
