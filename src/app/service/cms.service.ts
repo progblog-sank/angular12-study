@@ -53,5 +53,9 @@ export class CmsService {
       );
   }
 
+  getContactList(): Observable<any> {
+    return this.http.get<any>(this.contactUrl + '?limit=100', this.httpOptions);
+  }
+
 }
 

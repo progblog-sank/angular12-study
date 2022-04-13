@@ -23,7 +23,11 @@ export class NavListComponent implements OnInit {
       {
         pageName: 'お問い合わせ',
         componentName: 'contact'
-      }
+      },
+      {
+        pageName: 'お問い合わせ一覧',
+        componentName: 'contactList'
+      },
 
     ];
   }

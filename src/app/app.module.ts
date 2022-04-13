@@ -16,6 +16,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTableModule } from '@angular/material/table';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 // Layout
 import { HeaderComponent } from './layouts/header/header.component';
@@ -36,6 +38,7 @@ import { CmsService } from './service/cms.service';
 // Other
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ContactListComponent } from './pages/contact-list/contact-list.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +49,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ContactComponent,
     MediaComponent,
     MediaSlugComponent,
+    ContactListComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,7 +68,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatCardModule,
     MatProgressSpinnerModule,
     MatInputModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTableModule,
+    MatCheckboxModule
   ],
   providers: [UtilsService, CmsService],
   bootstrap: [AppComponent]
