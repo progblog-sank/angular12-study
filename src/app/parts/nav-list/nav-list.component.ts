@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-nav-list',
@@ -9,24 +10,33 @@ export class NavListComponent implements OnInit {
   pageTitle: {
     pageName: string,
     componentName: string
+    show: boolean
   }[]
-  constructor() {
+  isLogin: boolean = Boolean(sessionStorage.getItem('isLogin')) ?? false;
+  constructor(private snackBar: MatSnackBar) {
     this.pageTitle = [
       {
         pageName: 'ホーム',
-        componentName: 'home'
+        componentName: 'home',
+        show: true,
       },
       {
         pageName: '作成ログ',
-        componentName: 'media'
+        componentName: 'media',
+        show: true,
+
       },
       {
         pageName: 'お問い合わせ',
-        componentName: 'contact'
+        componentName: 'contact',
+        show: true,
+
       },
       {
         pageName: 'お問い合わせ一覧',
-        componentName: 'contactList'
+        componentName: 'contactList',
+        show: this.isLogin,
+
       },
 
     ];

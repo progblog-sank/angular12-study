@@ -1,7 +1,7 @@
-<mat-selection-list #shoes [multiple]="false">
-  <mat-list-option *ngFor="let shoe of pageTitle" [value]="shoe">
-    <a routerLink="{{ shoe.componentName }}" routerLinkActive="active">{{
-      shoe.pageName
+<mat-selection-list #items [multiple]="false">
+  <mat-list-option *ngFor="let item of pageTitle" [value]="item">
+    <a *ngIf="item.show" routerLink="{{ item.componentName }}" routerLinkActive="active">{{
+      item.pageName
     }}</a>
   </mat-list-option>
 </mat-selection-list>
