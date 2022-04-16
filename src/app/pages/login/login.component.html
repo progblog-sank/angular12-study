@@ -1,0 +1,23 @@
+<div class="l-content">
+    <form [formGroup]="loginForm">
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>ユーザー名</mat-label>
+                <input matInput type="text" formControlName="userName">
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="outline">
+                <mat-label>パスワード</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" autocomplete="off">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+        </p>
+        <p>
+            <button mat-raised-button color="primary" type="submit" (click)="login()">ログイン</button>
+        </p>
+    </form>
+</div>

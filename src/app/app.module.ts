@@ -39,6 +39,7 @@ import { CmsService } from './service/cms.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactListComponent } from './pages/contact-list/contact-list.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { ContactListComponent } from './pages/contact-list/contact-list.componen
     MediaComponent,
     MediaSlugComponent,
     ContactListComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
