@@ -24,7 +24,8 @@ export class LoginComponent implements OnInit {
     const isUserName = environment.userName === this.loginForm.value.userName
     const isPassword = environment.password === this.loginForm.value.password
     if (isUserName && isPassword) {
-      console.log("login")
+      this.openSnackBar("ログインしました。")
+      sessionStorage.setItem('isLogin', 'true');
     } else {
       this.openSnackBar("失敗しました。")
     }
