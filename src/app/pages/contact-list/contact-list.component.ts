@@ -1,7 +1,9 @@
 import { SelectionModel } from '@angular/cdk/collections';
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatTableDataSource } from '@angular/material/table';
 import { CmsService } from '../../service/cms.service'
+import { ContactDetailComponent } from './popup/contact-detail/contact-detail.component';
 
 
 export interface ContactList {
@@ -21,7 +23,7 @@ export class ContactListComponent implements OnInit {
   displayedColumns: string[] = ['select', 'title', 'name', 'email', 'content'];
   dataSource = new MatTableDataSource<ContactList>();
   selection = new SelectionModel<ContactList>(true, []);
-  constructor(private service: CmsService) { }
+  constructor(private service: CmsService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getContactList()
@@ -55,6 +57,22 @@ export class ContactListComponent implements OnInit {
       return `${this.isAllSelected() ? 'deselect' : 'select'} all`;
     }
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.title + 1}`;
+  }
+
+  openDetail(row: ContactList) {
+    const dialogRef = this.dialog.open(ContactDetailComponent, {
+      width: '500px',
+      data: { row: row },
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      // this.animal = result;
+    });
+  }
+
+  clamp(text: string) {
+    return text.substr(0, 20) + '...'
   }
 }
 

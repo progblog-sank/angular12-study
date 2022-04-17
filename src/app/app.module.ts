@@ -18,6 +18,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import {MatDialogModule} from '@angular/material/dialog';
 
 // Layout
 import { HeaderComponent } from './layouts/header/header.component';
@@ -42,6 +43,7 @@ import { ContactListComponent } from './pages/contact-list/contact-list.componen
 import { LoginComponent } from './pages/login/login.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ContactDetailComponent } from './pages/contact-list/popup/contact-detail/contact-detail.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +56,7 @@ import { environment } from '../environments/environment';
     MediaSlugComponent,
     ContactListComponent,
     LoginComponent,
+    ContactDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -75,6 +78,7 @@ import { environment } from '../environments/environment';
     MatSnackBarModule,
     MatTableModule,
     MatCheckboxModule,
+    MatDialogModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable

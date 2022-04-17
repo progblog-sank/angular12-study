@@ -1,6 +1,6 @@
 <mat-selection-list #items [multiple]="false">
   <mat-list-option *ngFor="let item of pageTitle" [value]="item">
-    <a *ngIf="item.show" routerLink="{{ item.componentName }}" routerLinkActive="active">{{
+    <a *ngIf="item.show" (click)="pushRouter(item.componentName, item.isBlank)" routerLinkActive="active">{{
       item.pageName
     }}</a>
   </mat-list-option>

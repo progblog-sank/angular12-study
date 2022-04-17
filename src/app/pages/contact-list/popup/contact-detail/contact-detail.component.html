@@ -1,0 +1,6 @@
+<h2>{{data.row.title}}</h2>
+<p class="data">{{data.row.publishedAt | date:"yyyy.MM.dd HH:mm"}}</p>
+<p class="address" (click)="sentEmail(data.row.email)">{{data.row.name}} ({{data.row.email}})</p>
+<div class="content">
+    {{data.row.content}}
+</div>

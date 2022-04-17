@@ -1,0 +1,19 @@
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.data {
+    font-size: 12px;
+    text-align: end;
+}
+.address {
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.content {
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.12);
+    white-space: pre-wrap;
+}
