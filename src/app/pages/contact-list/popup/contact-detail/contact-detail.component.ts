@@ -16,7 +16,7 @@ export class ContactDetailComponent implements OnInit {
   }
 
   sentEmail(email: string) {
-    window.location.href = 'mailto:' + email
+    return 'mailto:' + email
   }
 
 }
