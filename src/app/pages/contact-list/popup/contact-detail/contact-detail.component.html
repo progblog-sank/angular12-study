@@ -1,6 +1,6 @@
-<h2>{{data.row.title}}</h2>
-<p class="data">{{data.row.publishedAt | date:"yyyy.MM.dd HH:mm"}}</p>
-<p class="address"><a [href]="sentEmail(data.row.email)">{{data.row.name}} ({{data.row.email}})</a></p>
+<h2>{{data.title}}</h2>
+<p class="data">{{data.publishedAt | date:"yyyy.MM.dd HH:mm"}}</p>
+<p class="address"><a [href]="sentEmail(data.email)">{{data.name}} ({{data.email}})</a></p>
 <div class="content">
-    {{data.row.content}}
+    {{data.content}}
 </div>

@@ -62,7 +62,7 @@ export class ContactListComponent implements OnInit {
   openDetail(row: ContactList) {
     const dialogRef = this.dialog.open(ContactDetailComponent, {
       width: '500px',
-      data: { row: row },
+      data: row,
     });
 
     dialogRef.afterClosed().subscribe(result => {
