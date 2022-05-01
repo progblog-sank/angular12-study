@@ -3,19 +3,6 @@ h2 {
     font-weight: bold;
 }
 
-.action-button {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 20px;
-
-    button {
-        margin-right: 20px;
-
-        &:last-of-type {
-            margin-right: 0;
-        }
-    }
-}
 
 .scroll-element {
     overflow: auto;
@@ -55,4 +42,26 @@ td.mat-footer-cell {
 
 .mat-column-content {
     width: 35%;
+}
+
+.action-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+
+    button {
+        margin-right: 20px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+}
+
+.is-already {
+    background-color: #f3f3f3;
+}
+
+.is-delete {
+    display: none;
 }

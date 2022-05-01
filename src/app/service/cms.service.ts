@@ -53,6 +53,15 @@ export class CmsService {
       );
   }
 
+  patchContactContent(uuid: string, obj: any): Observable<any> {
+    return this.http.patch<any>(this.contactUrl + '/' + uuid, obj, this.httpOptions)
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
+
+
+
   getContactList(): Observable<any> {
     return this.http.get<any>(this.contactUrl + '?limit=100', this.httpOptions);
   }

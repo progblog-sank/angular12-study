@@ -18,7 +18,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 // Layout
 import { HeaderComponent } from './layouts/header/header.component';
@@ -79,6 +80,7 @@ import { ContactDetailComponent } from './pages/contact-list/popup/contact-detai
     MatTableModule,
     MatCheckboxModule,
     MatDialogModule,
+    MatProgressBarModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the application is stable

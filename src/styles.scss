@@ -1,7 +1,7 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use "~@angular/material" as mat;
-@use "./assets/palette" as palette;
+@use "~@angular/material"as mat;
+@use "./assets/palette"as palette;
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -20,36 +20,34 @@ $custom-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$custom-theme: mat.define-light-theme(
-  (
-    color: (
-      primary: $custom-primary,
+$custom-theme: mat.define-light-theme((color: (primary: $custom-primary,
       accent: $custom-accent,
       warn: $custom-warn,
     ),
-  )
-);
+  ));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($custom-theme);
 
-$custom-typography: mat.define-typography-config(
-  $font-family: "Noto Sans JP",
+$custom-typography: mat.define-typography-config($font-family: "Noto Sans JP",
 );
 @include mat.core($custom-typography);
 
 /* You can add global styles to this file, and also import other style files */
+*:not(.material-icons) {
+  font-family: "Roboto", "Noto Sans JP", "Helvetica Neue", sans-serif !important;
+}
 
 html,
 body {
   height: 100%;
   line-height: 1.7;
 }
+
 body {
   margin: 0;
-  font-family: "Roboto", "Noto Sans JP", "Helvetica Neue", sans-serif;
 }
 
 .l-content {

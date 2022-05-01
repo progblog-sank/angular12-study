@@ -31,7 +31,8 @@ export class ContactListComponent implements OnInit {
 
   getContactList(): void {
     this.service.getContactList().subscribe(res => {
-      this.dataSource.data = res.contents;
+      const createTemp = res.contents.filter((el: any) => !el.delete)
+      this.dataSource.data = createTemp;
     })
   }
   /** Whether the number of selected elements matches the total number of rows. */
@@ -73,6 +74,15 @@ export class ContactListComponent implements OnInit {
 
   clamp(text: string) {
     return text.substr(0, 20) + '...'
+  }
+
+  displayDelete() {
+    this.service.getContactList().subscribe(res => {
+      res.contents.forEach((elm: any) => {
+        elm.delete = false
+      });
+      this.dataSource.data = res.contents;
+    })
   }
 }
 

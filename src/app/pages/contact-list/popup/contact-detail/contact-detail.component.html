@@ -4,3 +4,7 @@
 <div class="content">
     {{data.content}}
 </div>
+<div class="action-button">
+    <button mat-raised-button color="accent" (click)="alreadyRead(data)" [disabled]="data.alreadyRead">既読</button>
+    <button mat-raised-button color="warn" (click)="deleteFlag(data)">削除</button>
+</div>
