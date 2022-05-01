@@ -1,0 +1,31 @@
+.content {
+    margin-top: 40px;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+p {
+    margin-top: 1em;
+}
+
+table {
+    margin-top: 1em;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    padding: 2.5px 10px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+a {
+    color: #1a0dab;
+}
